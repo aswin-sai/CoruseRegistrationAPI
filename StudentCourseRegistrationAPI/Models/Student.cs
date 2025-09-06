@@ -1,7 +1,9 @@
-﻿public class Student
+﻿namespace StudentCourseRegistrationAPI.Models
 {
-    //public int Id { get; set; }
-    public required string FullName { get; set; }
-    public required string Email { get; set; }
-    public required string Roll { get; set; }
+    public class Student
+    {
+        public int Roll { get; set; } // PK, identity
+        public string FullName { get; set; }
+        public string Email { get; set; }
+    }
 }

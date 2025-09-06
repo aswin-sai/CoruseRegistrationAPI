@@ -29,10 +29,10 @@ namespace StudentCourseRegistrationAPI.Controllers
         }
 
         // GET: api/Students/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Student>> GetStudent(int id)
+        [HttpGet("{roll}")]
+        public async Task<ActionResult<Student>> GetStudent(int roll)
         {
-            var student = await _context.Students.FindAsync(id);
+            var student = await _context.Students.FindAsync(roll);
 
             if (student == null)
             {
@@ -44,21 +44,9 @@ namespace StudentCourseRegistrationAPI.Controllers
 
         // GET: api/Students/login/{roll}
         [HttpGet("login/{roll}")]
-        public async Task<IActionResult> LoginByRoll(string roll)
+        public async Task<IActionResult> LoginByRoll(int roll)
         {
-            var student = await _context.Students.FirstOrDefaultAsync(s => s.Roll == roll);
-            if (student == null)
-            {
-                return NotFound();
-            }
-            return Ok(student);
-        }
-
-        // GET: api/Students/login/id/{id}
-        [HttpGet("login/id/{id}")]
-        public async Task<IActionResult> LoginById(int id)
-        {
-            var student = await _context.Students.FindAsync(id);
+            var student = await _context.Students.FindAsync(roll);
             if (student == null)
             {
                 return NotFound();
@@ -67,11 +55,10 @@ namespace StudentCourseRegistrationAPI.Controllers
         }
 
         // PUT: api/Students/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutStudent(int id, Student student)
+        [HttpPut("{roll}")]
+        public async Task<IActionResult> PutStudent(int roll, Student student)
         {
-            if (id != student.Id)
+            if (roll != student.Roll)
             {
                 return BadRequest();
             }
@@ -84,7 +71,7 @@ namespace StudentCourseRegistrationAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!StudentExists(id))
+                if (!StudentExists(roll))
                 {
                     return NotFound();
                 }
@@ -98,21 +85,20 @@ namespace StudentCourseRegistrationAPI.Controllers
         }
 
         // POST: api/Students
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Student>> PostStudent(Student student)
         {
             _context.Students.Add(student);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetStudent", new { id = student.Id }, student);
+            return CreatedAtAction("GetStudent", new { roll = student.Roll }, student);
         }
 
         // DELETE: api/Students/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteStudent(int id)
+        [HttpDelete("{roll}")]
+        public async Task<IActionResult> DeleteStudent(int roll)
         {
-            var student = await _context.Students.FindAsync(id);
+            var student = await _context.Students.FindAsync(roll);
             if (student == null)
             {
                 return NotFound();
@@ -124,9 +110,9 @@ namespace StudentCourseRegistrationAPI.Controllers
             return NoContent();
         }
 
-        private bool StudentExists(int id)
+        private bool StudentExists(int roll)
         {
-            return _context.Students.Any(e => e.Id == id);
+            return _context.Students.Any(e => e.Roll == roll);
         }
     }
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ANallanChakravarthu\\OneDrive - RealPage\\Desktop\\Student\\StudentCourseRegistrationAPI\\StudentCourseRegistrationAPI\\StudentCourseRegistrationAPI.csproj": {}
+    "D:\\Student\\StudentCourseRegistrationAPI\\StudentCourseRegistrationAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ANallanChakravarthu\\OneDrive - RealPage\\Desktop\\Student\\StudentCourseRegistrationAPI\\StudentCourseRegistrationAPI\\StudentCourseRegistrationAPI.csproj": {
+    "D:\\Student\\StudentCourseRegistrationAPI\\StudentCourseRegistrationAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ANallanChakravarthu\\OneDrive - RealPage\\Desktop\\Student\\StudentCourseRegistrationAPI\\StudentCourseRegistrationAPI\\StudentCourseRegistrationAPI.csproj",
+        "projectUniqueName": "D:\\Student\\StudentCourseRegistrationAPI\\StudentCourseRegistrationAPI.csproj",
         "projectName": "StudentCourseRegistrationAPI",
-        "projectPath": "C:\\Users\\ANallanChakravarthu\\OneDrive - RealPage\\Desktop\\Student\\StudentCourseRegistrationAPI\\StudentCourseRegistrationAPI\\StudentCourseRegistrationAPI.csproj",
-        "packagesPath": "C:\\Users\\ANallanChakravarthu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ANallanChakravarthu\\OneDrive - RealPage\\Desktop\\Student\\StudentCourseRegistrationAPI\\StudentCourseRegistrationAPI\\obj\\",
+        "projectPath": "D:\\Student\\StudentCourseRegistrationAPI\\StudentCourseRegistrationAPI.csproj",
+        "packagesPath": "C:\\Users\\cbec\\.nuget\\packages\\",
+        "outputPath": "D:\\Student\\StudentCourseRegistrationAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ANallanChakravarthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cbec\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
